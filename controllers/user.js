@@ -31,7 +31,7 @@ const createUser = async (req, res = response) => {
             birth_date as birthDate, 
             email as email, 
             phone as phone 
-        FROM ${DB_TABLE} WHERE email = ${email}`,
+        FROM ${DB_TABLE} WHERE email = '${email}' `,
             {
                 type: db.QueryTypes.SELECT
             }
